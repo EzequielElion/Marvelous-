@@ -3,36 +3,6 @@ from tkinter import *
 from tkinter import messagebox
 from tkinter import ttk
 import DataBaser
-
-
-
-def WorkSpace():
-    work = Tk()
-    work.title("Marvelous System - Work Area")
-    work.geometry("1000x600")
-    work.config(background="white")
-    work.resizable(width=False, height=False)
-
-   
-
-    usericon = PhotoImage(file = "C:\\Users\\DELL\\Documents\\GitHub\\Marvelous-\\login\\icons\\iconuser.png")
-  
-
-    LeftFrame = Frame(work, width=200, height=600, bg="light steel blue", relief="raise")
-    LeftFrame.pack(side=LEFT)
-
-    TopFrame = Frame(work, width=1000, height=40, bg="Pale Turquoise4", relief="raise" )
-    TopFrame.pack(side=TOP)
-
-    LogoLabel = Label(LeftFrame, image=usericon, bg="light steel blue")
-    LogoLabel.place(x=5, y=5)
-
-    NameLabel = Label(LeftFrame, text="User", font=("Noto Serif", 25), bg="light steel blue", fg="grey19")
-    NameLabel.place(x=60, y=15)
-
-
-    work.mainloop()
-
 #criar janela 
 jan = Tk()
 jan.title("Marvelous System - Acess Panel ")
@@ -82,11 +52,6 @@ def Login():
     try:
         if (User in VerifyLogin and Pass in VerifyLogin):
             messagebox.showinfo(title="Login Info", message="Acess confirmed. Welcome!")
-            jan.destroy()
-            WorkSpace()
-            
-
-            
     except:
         messagebox.showinfo(title="Login Info", message="Incorrect username or password!check if the account  is existin!")
     
